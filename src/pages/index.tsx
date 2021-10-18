@@ -36,8 +36,10 @@ export default function Home({ product } : HomeProps) {
   )
 }
 
+
 // forma de usar a chamada a api pelo server side
 export const getStaticProps: GetStaticProps = async () => {
+  //console.log('stripetha '+stripe)
   const price = await stripe.prices.retrieve('price_1Jjur3I08lnRLzj61QtvvAlh')
 
   const product = {
